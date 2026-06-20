@@ -51,6 +51,6 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="6" loc="(500,280)" name="FullAdder8"/>
+    <comp lib="6" loc="(700,260)" name="ALU"/>
   </circuit>
 </project>
