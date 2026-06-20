@@ -2,7 +2,7 @@
 
 A custom-designed 8-bit RISC processor with a handwritten assembler and compiler targeting the architecture
 
-**Status** In progress - Summer 2026
+**Status:** In progress - Summer 2026
 
 ## Components:
 - `docs/` - ISA specification and architecture
