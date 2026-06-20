@@ -112,7 +112,7 @@ Memory operations must leave these flags unchanged; only ALU operations (and som
     RAM[Rs2] = Rs1
     Writes byte in Rs1 to memory at the address in Rs2. Does not affect FLAGS, and ignores Rd and FUNC
 
-## Jump Operations
+## Jump Operations: PC *ends* @ address; PC doesn't increment
 ### OPC 0110: JMP
     PC = ADDR12
     Unconditional jump
@@ -146,7 +146,7 @@ Memory operations must leave these flags unchanged; only ALU operations (and som
     PC = Rs1
     Register-indirect unconditional jump. Loads PC from Rs1, giving access to the 
     full 16-bit address space. Rs1 must contain a valid instruction address. 
-    Rd, Rs2, and FUNC are ignored. Does not affect FLAGS.
+    Rd, Rs2, and FUNC are ignored. Does not affect FLAGS. Other properties match other jump operations.
 
 ### OPC 1111: HALT
     Ends the program
