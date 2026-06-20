@@ -10,7 +10,7 @@ Data width - 8 bits
 
 Instruction width - 16 bits
 
-Address space - 16 bits (64KB)
+Address space - 12 bits (4KB)
 
 General registers - 8 (R0-R7)
 
@@ -112,7 +112,7 @@ Memory operations must leave these flags unchanged; only ALU operations (and som
     RAM[Rs2] = Rs1
     Writes byte in Rs1 to memory at the address in Rs2. Does not affect FLAGS, and ignores Rd and FUNC
 
-## Jump Operations: PC *ends* @ address; PC doesn't increment
+## Jump Operations: PC *ends* @ address; PC doesn't increment. Also, can only reach first 4096 instructions despite 16 bit address space
 ### OPC 0110: JMP
     PC = ADDR12
     Unconditional jump
@@ -142,16 +142,10 @@ Memory operations must leave these flags unchanged; only ALU operations (and som
     PC = PC + 1
     No operation
 
-### OPC 1101: JMPR
-    PC = Rs1
-    Register-indirect unconditional jump. Loads PC from Rs1, giving access to the 
-    full 16-bit address space. Rs1 must contain a valid instruction address. 
-    Rd, Rs2, and FUNC are ignored. Does not affect FLAGS. Other properties match other jump operations.
-
 ### OPC 1111: HALT
     Ends the program
 
-### OPC 1110: Reserved for future expansion
+### OPC 1101 and 1110: Reserved for future expansion
 
 # Reset Behavior
 On power-on/reset:

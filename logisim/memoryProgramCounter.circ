@@ -64,7 +64,15 @@
       <a name="label" val="Line"/>
       <a name="radix" val="16"/>
       <a name="type" val="output"/>
-      <a name="width" val="16"/>
+      <a name="width" val="12"/>
+    </comp>
+    <comp lib="0" loc="(1400,70)" name="Splitter">
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="0"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
     </comp>
     <comp lib="0" loc="(370,460)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -82,16 +90,12 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Jump_Addr"/>
       <a name="radix" val="16"/>
-      <a name="width" val="16"/>
+      <a name="width" val="12"/>
     </comp>
     <comp lib="0" loc="(570,240)" name="Splitter">
       <a name="bit1" val="0"/>
       <a name="bit10" val="1"/>
       <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
       <a name="bit2" val="0"/>
       <a name="bit3" val="0"/>
       <a name="bit4" val="0"/>
@@ -100,16 +104,12 @@
       <a name="bit7" val="0"/>
       <a name="bit8" val="1"/>
       <a name="bit9" val="1"/>
-      <a name="incoming" val="16"/>
+      <a name="incoming" val="12"/>
     </comp>
     <comp lib="0" loc="(570,310)" name="Splitter">
       <a name="bit1" val="0"/>
       <a name="bit10" val="1"/>
       <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
       <a name="bit2" val="0"/>
       <a name="bit3" val="0"/>
       <a name="bit4" val="0"/>
@@ -118,20 +118,43 @@
       <a name="bit7" val="0"/>
       <a name="bit8" val="1"/>
       <a name="bit9" val="1"/>
-      <a name="incoming" val="16"/>
+      <a name="incoming" val="12"/>
     </comp>
     <comp lib="0" loc="(630,330)" name="Constant"/>
-    <comp lib="13" loc="(1090,250)" name="FullAdder8"/>
+    <comp lib="0" loc="(910,250)" name="Splitter">
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="0"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="13" loc="(1170,250)" name="FullAdder1"/>
+    <comp lib="13" loc="(1390,210)" name="FullAdder1"/>
+    <comp lib="13" loc="(1610,170)" name="FullAdder1"/>
+    <comp lib="13" loc="(1830,130)" name="FullAdder1"/>
     <comp lib="13" loc="(850,290)" name="FullAdder8"/>
     <comp lib="2" loc="(490,310)" name="Multiplexer">
-      <a name="width" val="16"/>
+      <a name="width" val="12"/>
     </comp>
     <comp lib="5" loc="(510,280)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="width" val="16"/>
+      <a name="width" val="12"/>
     </comp>
-    <wire from="(1090,270)" to="(1100,270)"/>
-    <wire from="(1100,230)" to="(1100,270)"/>
+    <wire from="(1130,190)" to="(1130,220)"/>
+    <wire from="(1130,190)" to="(1390,190)"/>
+    <wire from="(1170,270)" to="(1420,270)"/>
+    <wire from="(1390,230)" to="(1430,230)"/>
+    <wire from="(1420,20)" to="(1420,30)"/>
+    <wire from="(1420,20)" to="(1870,20)"/>
+    <wire from="(1420,40)" to="(1630,40)"/>
+    <wire from="(1420,50)" to="(1430,50)"/>
+    <wire from="(1420,60)" to="(1420,270)"/>
+    <wire from="(1430,50)" to="(1430,230)"/>
+    <wire from="(1610,190)" to="(1630,190)"/>
+    <wire from="(1630,40)" to="(1630,190)"/>
+    <wire from="(1830,150)" to="(1870,150)"/>
+    <wire from="(1870,20)" to="(1870,150)"/>
     <wire from="(370,460)" to="(470,460)"/>
     <wire from="(370,510)" to="(540,510)"/>
     <wire from="(380,350)" to="(500,350)"/>
@@ -151,13 +174,37 @@
     <wire from="(580,310)" to="(580,370)"/>
     <wire from="(580,370)" to="(1180,370)"/>
     <wire from="(590,220)" to="(860,220)"/>
-    <wire from="(590,230)" to="(1100,230)"/>
+    <wire from="(590,230)" to="(900,230)"/>
     <wire from="(590,290)" to="(630,290)"/>
     <wire from="(590,300)" to="(610,300)"/>
     <wire from="(610,250)" to="(610,300)"/>
-    <wire from="(610,250)" to="(870,250)"/>
-    <wire from="(850,290)" to="(870,290)"/>
+    <wire from="(610,250)" to="(910,250)"/>
+    <wire from="(850,290)" to="(950,290)"/>
     <wire from="(850,310)" to="(860,310)"/>
     <wire from="(860,220)" to="(860,310)"/>
+    <wire from="(900,70)" to="(1400,70)"/>
+    <wire from="(900,70)" to="(900,230)"/>
+    <wire from="(930,150)" to="(1610,150)"/>
+    <wire from="(930,150)" to="(930,210)"/>
+    <wire from="(930,220)" to="(1130,220)"/>
+    <wire from="(930,230)" to="(1170,230)"/>
+    <wire from="(930,240)" to="(930,270)"/>
+    <wire from="(930,270)" to="(950,270)"/>
+  </circuit>
+  <circuit name="memory">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="memory"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="5" loc="(590,240)" name="ROM">
+      <a name="addrWidth" val="12"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 12 8
+0
+</a>
+      <a name="label" val="ProgramMemory"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(590,250)" name="programCounter"/>
   </circuit>
 </project>
