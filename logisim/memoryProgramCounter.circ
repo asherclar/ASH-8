@@ -201,9 +201,9 @@
     <wire from="(930,240)" to="(930,270)"/>
     <wire from="(930,270)" to="(950,270)"/>
   </circuit>
-  <circuit name="memory">
+  <circuit name="instructionROM">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="memory"/>
+    <a name="circuit" val="instructionROM"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(370,250)" name="Pin">
@@ -244,5 +244,43 @@
     </comp>
     <comp loc="(590,250)" name="programCounter"/>
     <wire from="(830,300)" to="(940,300)"/>
+  </circuit>
+  <circuit name="dataRAM">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="dataRAM"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(400,390)" name="Constant"/>
+    <comp lib="0" loc="(410,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="WE"/>
+    </comp>
+    <comp lib="0" loc="(560,340)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Address"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(560,400)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(560,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="DataIn"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(800,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="DataOut"/>
+      <a name="type" val="output"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="5" loc="(560,330)" name="RAM">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(400,390)" to="(560,390)"/>
+    <wire from="(410,370)" to="(560,370)"/>
+    <wire from="(560,370)" to="(560,380)"/>
   </circuit>
 </project>
