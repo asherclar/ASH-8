@@ -44,7 +44,9 @@
     </tool>
     <sep/>
     <tool lib="1" name="NOT Gate"/>
-    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="AND Gate">
+      <a name="facing" val="north"/>
+    </tool>
     <tool lib="1" name="OR Gate"/>
     <tool lib="1" name="XOR Gate"/>
     <tool lib="1" name="NAND Gate"/>
@@ -129,6 +131,9 @@
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
+    <comp lib="1" loc="(540,370)" name="AND Gate">
+      <a name="facing" val="north"/>
+    </comp>
     <comp lib="13" loc="(1170,250)" name="FullAdder1"/>
     <comp lib="13" loc="(1390,210)" name="FullAdder1"/>
     <comp lib="13" loc="(1610,170)" name="FullAdder1"/>
@@ -168,8 +173,13 @@
     <wire from="(490,310)" to="(510,310)"/>
     <wire from="(500,330)" to="(500,350)"/>
     <wire from="(500,330)" to="(510,330)"/>
+    <wire from="(500,350)" to="(500,430)"/>
     <wire from="(500,350)" to="(510,350)"/>
-    <wire from="(540,370)" to="(540,510)"/>
+    <wire from="(500,430)" to="(520,430)"/>
+    <wire from="(520,420)" to="(520,430)"/>
+    <wire from="(540,450)" to="(540,510)"/>
+    <wire from="(540,450)" to="(560,450)"/>
+    <wire from="(560,420)" to="(560,450)"/>
     <wire from="(570,310)" to="(580,310)"/>
     <wire from="(580,310)" to="(580,370)"/>
     <wire from="(580,370)" to="(1180,370)"/>
@@ -196,15 +206,43 @@
     <a name="circuit" val="memory"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(370,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(370,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Jump_Addr"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="12"/>
+    </comp>
+    <comp lib="0" loc="(370,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="PC_Load"/>
+    </comp>
+    <comp lib="0" loc="(370,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Reset"/>
+    </comp>
+    <comp lib="0" loc="(940,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Instruction"/>
+      <a name="radix" val="16"/>
+      <a name="type" val="output"/>
+      <a name="width" val="16"/>
+    </comp>
     <comp lib="5" loc="(590,240)" name="ROM">
       <a name="addrWidth" val="12"/>
       <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 12 8
+      <a name="contents">addr/data: 12 16
 0
 </a>
+      <a name="dataWidth" val="16"/>
       <a name="label" val="ProgramMemory"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp loc="(590,250)" name="programCounter"/>
+    <wire from="(830,300)" to="(940,300)"/>
   </circuit>
 </project>
