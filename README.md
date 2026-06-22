@@ -10,5 +10,6 @@ A custom-designed 8-bit RISC processor with a handwritten assembler and compiler
 - `assembler/` - Python assembler (assembly --> binary)
 - `compiler/` - Compiler (TBD high level language --> assembly)
 
-## Architecture Overview
-Will be filled in as design progresses
+## Architecture Notes
+- Control unit is ROM-based due to increased simplicity and ease of modification
+- 

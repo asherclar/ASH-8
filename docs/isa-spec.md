@@ -112,7 +112,7 @@ Memory operations must leave these flags unchanged; only ALU operations (and som
     RAM[Rs2] = Rs1
     Writes byte in Rs1 to memory at the address in Rs2. Does not affect FLAGS, and ignores Rd and FUNC
 
-## Jump Operations: PC *ends* @ address; PC doesn't increment. Also, can only reach first 4096 instructions despite 16 bit address space
+## Jump Operations: PC *ends* @ address; PC doesn't increment
 ### OPC 0110: JMP
     PC = ADDR12
     Unconditional jump
@@ -129,13 +129,13 @@ Memory operations must leave these flags unchanged; only ALU operations (and som
     if N=1: PC = ADDR12
     Jump if last result was negative; can implement less-than comparisons
 
-### OPC 1010: JGE
-    if N=0: PC = ADDR12
-    Jump if last result was non-negative; can implement greater than or equal to comparisons
+### OPC 1010: JVS
+    if V=1: PC = ADDR12
+    Jump if overflow set
 
 ### OPC 1011: JCS
     if C=1: PC = ADDR12
-    Jump if carrry was set, helps detect overflow and enables multi-byte arithmetic
+    Jump if carrry was set
 
 ## Control Operations
 ### OPC 1100: NOP

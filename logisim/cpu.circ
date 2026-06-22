@@ -13,6 +13,8 @@
   <lib desc="#I/O" name="4"/>
   <lib desc="#Base" name="5"/>
   <lib desc="file#alu.circ" name="6"/>
+  <lib desc="file#memoryProgramCounter.circ" name="7"/>
+  <lib desc="file#registers.circ" name="8"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -50,7 +52,11 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-    <comp lib="6" loc="(700,260)" name="ALU"/>
+    <a name="simulationFrequency" val="2.0"/>
+    <comp lib="6" loc="(730,170)" name="ALU"/>
+    <comp lib="7" loc="(730,600)" name="instructionROM"/>
+    <comp lib="7" loc="(730,710)" name="dataRAM"/>
+    <comp lib="8" loc="(730,300)" name="main_regs"/>
+    <comp lib="8" loc="(730,450)" name="FLAGS_regs"/>
   </circuit>
 </project>
