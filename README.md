@@ -11,5 +11,5 @@ A custom-designed 8-bit RISC processor with a handwritten assembler and compiler
 - `compiler/` - Compiler (TBD high level language --> assembly)
 
 ## Architecture Notes
-- Control unit is ROM-based due to increased simplicity and ease of modification
+- Control unit is logic based, not ROM based
 - 
