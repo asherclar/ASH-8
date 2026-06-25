@@ -393,7 +393,11 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="2.0"/>
+    <comp lib="0" loc="(1140,660)" name="Tunnel">
+      <a name="label" val="RAM_out"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(1180,110)" name="Tunnel">
       <a name="label" val="REGS_WE"/>
     </comp>
@@ -443,6 +447,10 @@
       <a name="label" val="FUNC"/>
       <a name="width" val="3"/>
     </comp>
+    <comp lib="0" loc="(1740,370)" name="Tunnel">
+      <a name="label" val="ALU_out"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(1800,90)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
@@ -454,6 +462,10 @@
     <comp lib="0" loc="(220,370)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(240,430)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="RESET"/>
     </comp>
     <comp lib="0" loc="(310,390)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -584,6 +596,25 @@
       <a name="facing" val="east"/>
       <a name="label" val="RAM_WE"/>
     </comp>
+    <comp lib="0" loc="(820,390)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(880,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ALU_out"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(880,450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IMM8"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(900,480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RAM_out"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(910,290)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
@@ -611,6 +642,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
+    <comp lib="0" loc="(960,460)" name="Tunnel">
+      <a name="label" val="OutputDevice"/>
+      <a name="width" val="2"/>
+    </comp>
     <comp lib="1" loc="(1430,500)" name="OR Gate">
       <a name="inputs" val="4"/>
     </comp>
@@ -623,11 +658,21 @@
     <comp lib="2" loc="(870,650)" name="Multiplexer">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="5" loc="(1984,378)" name="Text">
+    <comp lib="2" loc="(950,430)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="5" loc="(1197,821)" name="Text">
+      <a name="text" val="sign-extender"/>
+    </comp>
+    <comp lib="5" loc="(1968,462)" name="Text">
       <a name="text" val="connect here w/ MUX and outputDevice pin on CU to Data on regs"/>
     </comp>
     <comp lib="5" loc="(563,231)" name="Text">
       <a name="text" val="OPC"/>
+    </comp>
+    <comp lib="5" loc="(967,492)" name="Text">
+      <a name="text" val="output mux logic"/>
     </comp>
     <comp lib="6" loc="(1720,290)" name="ALU">
       <a name="label" val="ArithLogUnit"/>
@@ -687,6 +732,7 @@
     <wire from="(1720,310)" to="(1750,310)"/>
     <wire from="(1720,330)" to="(1740,330)"/>
     <wire from="(1720,350)" to="(1730,350)"/>
+    <wire from="(1720,370)" to="(1740,370)"/>
     <wire from="(1730,130)" to="(1730,350)"/>
     <wire from="(1730,130)" to="(1800,130)"/>
     <wire from="(1740,150)" to="(1740,330)"/>
@@ -703,6 +749,7 @@
     <wire from="(2040,40)" to="(2040,130)"/>
     <wire from="(2050,30)" to="(2050,150)"/>
     <wire from="(220,370)" to="(230,370)"/>
+    <wire from="(240,430)" to="(310,430)"/>
     <wire from="(260,410)" to="(260,600)"/>
     <wire from="(260,410)" to="(310,410)"/>
     <wire from="(260,600)" to="(1240,600)"/>
@@ -754,11 +801,20 @@
     <wire from="(800,610)" to="(1200,610)"/>
     <wire from="(800,610)" to="(800,660)"/>
     <wire from="(800,660)" to="(840,660)"/>
+    <wire from="(820,390)" to="(900,390)"/>
     <wire from="(820,620)" to="(1210,620)"/>
     <wire from="(820,620)" to="(820,640)"/>
     <wire from="(820,640)" to="(840,640)"/>
     <wire from="(850,670)" to="(850,750)"/>
     <wire from="(870,650)" to="(920,650)"/>
+    <wire from="(880,420)" to="(910,420)"/>
+    <wire from="(880,450)" to="(890,450)"/>
+    <wire from="(890,430)" to="(890,450)"/>
+    <wire from="(890,430)" to="(910,430)"/>
+    <wire from="(900,390)" to="(900,410)"/>
+    <wire from="(900,410)" to="(910,410)"/>
+    <wire from="(900,440)" to="(900,480)"/>
+    <wire from="(900,440)" to="(910,440)"/>
     <wire from="(910,170)" to="(960,170)"/>
     <wire from="(910,290)" to="(960,290)"/>
     <wire from="(910,30)" to="(2050,30)"/>
@@ -772,10 +828,14 @@
     <wire from="(920,40)" to="(920,150)"/>
     <wire from="(920,650)" to="(920,660)"/>
     <wire from="(930,130)" to="(960,130)"/>
+    <wire from="(930,450)" to="(930,460)"/>
+    <wire from="(930,460)" to="(960,460)"/>
     <wire from="(930,50)" to="(2030,50)"/>
     <wire from="(930,50)" to="(930,130)"/>
     <wire from="(940,110)" to="(960,110)"/>
     <wire from="(940,60)" to="(2020,60)"/>
     <wire from="(940,60)" to="(940,110)"/>
+    <wire from="(950,430)" to="(960,430)"/>
+    <wire from="(960,390)" to="(960,430)"/>
   </circuit>
 </project>
