@@ -50,8 +50,6 @@ For jump instructions, Rd + Rs1 + Rs2 + FUNC all merge into a 12-bit address fie
 
 [11:0]  ADDR12 - 12 bits (addresses 0x0000–0x0FFF)
 
-NOTE: Programs must be loaded starting at address 0x0000 and must not exceed 4096 instructions. For jumps beyond this range, use JMPR (see OPC 1101)
-
 ## FLAGS Register
 Z - Zero flag (bit 0). Set to 1 when the result of the last operation was exactly 0x00. 
 
