@@ -693,7 +693,7 @@
       <a name="addrWidth" val="12"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 12 16
-320f 340b 650 50c0 f000
+320f 340a 650 50c0 f000
 </a>
       <a name="dataWidth" val="16"/>
     </comp>
@@ -813,11 +813,9 @@
     <wire from="(1890,150)" to="(1940,150)"/>
     <wire from="(1900,170)" to="(1900,270)"/>
     <wire from="(1900,170)" to="(1940,170)"/>
-    <wire from="(200,580)" to="(1420,580)"/>
-    <wire from="(200,580)" to="(200,590)"/>
-    <wire from="(200,590)" to="(210,590)"/>
-    <wire from="(210,390)" to="(210,590)"/>
+    <wire from="(210,390)" to="(210,580)"/>
     <wire from="(210,390)" to="(230,390)"/>
+    <wire from="(210,580)" to="(1420,580)"/>
     <wire from="(2160,110)" to="(2180,110)"/>
     <wire from="(2160,130)" to="(2190,130)"/>
     <wire from="(2160,40)" to="(2160,70)"/>
