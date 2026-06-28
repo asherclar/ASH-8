@@ -27,9 +27,8 @@ Syntax:
 
 *Store to and reload from memory*
 ```
-    LI    R1, 42     ; R1 = 42 (value)
-    LI    R2, 0      ; R2 = 0  (address)
-    STORE R1, R2     ; RAM[0] = 42
-    LOAD  R3, R2     ; R3 = RAM[0] = 42
+    LI    R1, 8     ; R1 = 8 (value)
+    STORE R1, R0     ; RAM[0] = 8
+    LOAD  R3, R0     ; R3 = RAM[0] = 8
     HALT
 ```
