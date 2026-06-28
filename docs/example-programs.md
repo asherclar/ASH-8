@@ -12,7 +12,7 @@ Syntax:
     LI   R1, 15        ; R1 = 15
     LI   R2, 10        ; R2 = 10
     ADD  R3, R1, R2    ; R3 = 25
-    STORE R0, R0, R3   ; RAM[0] = 25
+    STORE R0, R3, R0   ; RAM[0] = 25
     HALT
 ```
 

@@ -667,6 +667,7 @@
       <a name="facing" val="east"/>
       <a name="label" val="RAM_WE"/>
     </comp>
+    <comp lib="1" loc="(1020,720)" name="NOT Gate"/>
     <comp lib="1" loc="(120,330)" name="AND Gate">
       <a name="negate0" val="true"/>
     </comp>
@@ -692,7 +693,7 @@
       <a name="addrWidth" val="12"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 12 16
-320f 340a 650 5003 f000
+320f 340b 650 50c0 f000
 </a>
       <a name="dataWidth" val="16"/>
     </comp>
@@ -720,7 +721,8 @@
     <wire from="(1000,600)" to="(1000,620)"/>
     <wire from="(1000,600)" to="(1390,600)"/>
     <wire from="(1000,620)" to="(1020,620)"/>
-    <wire from="(1030,650)" to="(1030,730)"/>
+    <wire from="(1020,720)" to="(1030,720)"/>
+    <wire from="(1030,650)" to="(1030,720)"/>
     <wire from="(1050,630)" to="(1100,630)"/>
     <wire from="(1060,400)" to="(1090,400)"/>
     <wire from="(1060,430)" to="(1070,430)"/>
@@ -854,8 +856,8 @@
     <wire from="(730,70)" to="(730,150)"/>
     <wire from="(730,70)" to="(880,70)"/>
     <wire from="(750,110)" to="(780,110)"/>
-    <wire from="(780,110)" to="(780,730)"/>
-    <wire from="(780,730)" to="(1030,730)"/>
+    <wire from="(780,110)" to="(780,720)"/>
+    <wire from="(780,720)" to="(990,720)"/>
     <wire from="(830,290)" to="(830,350)"/>
     <wire from="(830,290)" to="(880,290)"/>
     <wire from="(830,350)" to="(900,350)"/>
